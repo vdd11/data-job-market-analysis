@@ -62,7 +62,7 @@ The data is not stored in the repo, so the pipeline is: load the data into Postg
    ```
 3. **Get the data:** download the dataset from the link above into a local `csv_files/` folder.
 4. **Load it into PostgreSQL:** run the scripts in `sql_load/` in order (`1_create_database.sql`, `2_create_tables.sql`, `3_modify_tables.sql`). **Edit the file paths in the `COPY` statements in `3_modify_tables.sql`**, which point to a local folder on the author's machine.
-5. **Run the queries** in `sql_queries/` and export each result as a CSV into `csv_files/`. The notebook reads these files: `highest_paying_job_titles.csv`, `highest_paying_skills_all.csv`, `highest_paying_skills_data_analyst.csv`, `highest_skill_demand_all.csv`, `highest_skill_demand_data_analyst.csv`, `optimal_skills_all_remote.csv` and `optimal_skills_data_analyst_remote.csv`. The `*_data_analyst*` files appear to be Data Analyst-only versions of these queries, but the repo only contains the all-jobs versions. [TODO: add the Data Analyst query variants.]
+5. **Run the queries** in `sql_queries/` and export each result as a CSV into `csv_files/`. The notebook reads these files: `highest_paying_job_titles.csv`, `highest_paying_skills_all.csv`, `highest_paying_skills_data_analyst.csv`, `highest_skill_demand_all.csv`, `highest_skill_demand_data_analyst.csv`, `optimal_skills_all_remote.csv` and `optimal_skills_data_analyst_remote.csv`. The `*_data_analyst*` files appear to be Data Analyst-only versions of these queries. This repo includes only the all-jobs versions, so those two files cannot be regenerated from it.
 6. **Launch the notebook:**
    ```bash
    jupyter notebook notebooks/
